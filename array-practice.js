@@ -4,32 +4,32 @@ var people = ['Greg', 'Mary', 'Devon', 'James'];
 people.forEach(function(element) { console.log(element); });
 
 // 2. Write the command to remove "Greg" from the array.
-let index = people.indexOf('Greg');
-if (index !== -1) {
-  people.splice(index, 1);
-}
+people.shift();
+console.log(people);
+
 
 // 3. Write the command to remove "James" from the array.
-let index = people.indexOf('James');
-if (index !== -1) {
-  people.splice(index, 1);
-}
+people.pop();
+console.log(people);
+
+// let index = people.indexOf('James');
+// if (index !== -1) {
+//   people.splice(index3, 1);
+// }
 
 // 4. Write the command to add "Matt" to the front of the array.
 people.unshift('Matt'); // ['Matt', 'Greg', Mary', 'Devon', 'James']
+console.log(people);
 
 // 5. Write the command to add your name to the end of the array.
-people.pop('Chad'); // ['Greg', Mary', 'Devon', 'James', 'Chad']
+people.push('Chad'); // ['Greg', Mary', 'Devon', 'James', 'Chad']
+console.log(people);
 
 // 6. Using a loop, iterate through this array and after console.log-ing "Mary", exit from the loop.
-let findItemIndex = people.indexOf('Mary');
-if (findItemIndex === -1) {
-  findItemIndex = people.length;
+for (item of people) {
+  if (item === 'Mary') break;
+  console.log(item);
 }
-for (let index = 0; index < findItemIndex; index++) {
-  console.log(people[index]);
-}
-
 
 // 7. Write the command to make a copy of the array using slice. The copy should NOT include "Mary" or "Matt".
 let indexOfMaryAtPeople = people.indexOf('Mary');
